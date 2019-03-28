@@ -33,26 +33,6 @@ def merge_sort(A):
         return A
 
 
-def merge(left, right):
-    merged_array = []
-    i, j = 0, 0
-    # min_left_right = min(len(left), len(right))
-    while i < len(left) and j < len(right):
-        if left[i] < right[j]:
-            merged_array.append(left[i])
-            i += 1
-        else:
-            merged_array.append(right[j])
-            j += 1
-    while i < len(left):
-        merged_array.append(left[i])
-        i += 1
-    while j < len(right):
-        merged_array.append(right[j])
-        j += 1
-    return merged_array
-
-
 
 def main():
     input_array = [5,12,2,4,6,1,3,7,8,10,14,12,13,11,9]
