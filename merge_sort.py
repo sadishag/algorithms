@@ -33,7 +33,6 @@ def merge_sort(A):
         return A
 
 
-
 def main():
     input_array = [5,12,2,4,6,1,3,7,8,10,14,12,13,11,9]
     res = merge_sort(input_array)
