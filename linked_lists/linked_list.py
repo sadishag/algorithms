@@ -30,9 +30,9 @@ class Node:
 
 if __name__ == "__main__":
     nd = Node(1)
-    nd.next = Node(2)
-    nd.next.next = Node(3)
-    nd.next.next.next = Node(4)
-    nd.next.next.next.next = Node(19)
+    nd.append_to_tail(2)
+    nd.append_to_tail(3)
+    nd.append_to_tail(4)
+    nd.append_to_tail(19)
     nd.append_to_tail(10)
     nd.print_list()
