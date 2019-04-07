@@ -9,14 +9,22 @@ class Node:
         self.val = x
         self.next = None
 
-    def print_list(self, root):
+    def print_list(self):
         res_str = ""
+        root = self
         while root != None:
             res_str += str(root.val)
             if root.next != None:
                 res_str += "-->"
             root = root.next
         print(res_str)
+
+    def append_to_tail(self, val):
+        root = self
+        end = Node(val)
+        while root.next != None:
+            root = root.next
+        root.next = end
 
 
 
@@ -26,4 +34,5 @@ if __name__ == "__main__":
     nd.next.next = Node(3)
     nd.next.next.next = Node(4)
     nd.next.next.next.next = Node(19)
-    nd.print_list(nd)
+    nd.append_to_tail(10)
+    nd.print_list()
